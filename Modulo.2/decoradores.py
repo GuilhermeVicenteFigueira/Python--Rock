@@ -1,23 +1,27 @@
-def decorador (func):
+def decorador(func):
     def wrapper():
-        print("antes da função chamda")
+        print("Antes da função ser chamada")
         func()
-        print("Depois da funçõa ser chamada")
-        return wrapper
-    
+        print("Depois da função ser chamada")
+    return wrapper  
+
 @decorador
 def funcao():
-    print("Minha funcção foi chamada")
+    print("Minha função foi chamada")
 
-class meuDecoradorClasse:
+funcao()
+
+class MeuDecoradorClasse:
     def __init__(self, func) -> None:
         self.func = func
 
     def __call__(self) -> any:
-        print("Antes da função ser chamda (decorador de clase)")
+        print("Antes da função ser chamada (decorador de classe)")
         self.func()
-        print("Deopis da funçãp ser chamada (decorador de classe)")
+        print("Depois da função ser chamada (decorador de classe)")
 
-@meuDecoradorClasse
+@MeuDecoradorClasse
 def segundaFuncao():
-    print("Segunda funcao foi add")
+    print("Segunda função foi chamada")
+
+segundaFuncao()
