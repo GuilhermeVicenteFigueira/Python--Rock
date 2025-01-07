@@ -82,8 +82,8 @@ class Orquestrador:
     """Classe orquestradora do jogo"""
 
     def __init__(self) -> None:
-        self.heroi = Heroi(nome ="Heroi", vida = 30, nivel = 5 ,habilidade = "Super Força")
-        self.inimigo = Inimigo(nome = "Morcego", vida = 20, nivel = 5, tipo = "Voador")
+        self.heroi = Heroi(nome ="pythonLovers", vida = 1000000000, nivel = 1000000 ,habilidade = "FDS O POO EU SOU MACACO")
+        self.inimigo = Inimigo(nome = "phpNoggers", vida = 1, nivel = 1, tipo = "PATO")
 
 
 
@@ -93,7 +93,7 @@ class Orquestrador:
 
         print(" Iniciando o Combate !")
         while self.heroi.getVida() > 0 and self.inimigo.getVida() > 0:
-            print ("\n Detalhes dos Persoinagens: ")
+            print ("\n Detalhes dos Personagens: ")
             print(self.heroi.exibirDetalhes())
             print(self.inimigo.exibirDetalhes())
 
@@ -111,6 +111,7 @@ class Orquestrador:
             if self.inimigo.getVida() > 0:
                 #Inimigo ataca o heroi
                 self.inimigo.atacar(self.heroi)
+
 
         if self.heroi.getVida() > 0:
             print (f"Parabens você venceu o {self.inimigo.getNome()}")
